@@ -12,7 +12,7 @@ set oneosrootfol=%cd%
 set uptime=%time%
 echo set safemode=^0> system\safemode.bat
 set debug=0
-set build=1069
+set build=10
 for /f %%a in (system\settings.conf) do set %%a
 if NOT exist system\downloaded1.info (
 goto make_hasinter2
@@ -23,13 +23,13 @@ goto make_hasinter3
 :bios
 cls
 ::   ________________________________________________________________________________
-echo                                   ÛÛ      ÛÛ
-echo                                    ÛÛ    ÛÛ
-echo                                     ÛÛÛÛÛÛ 
-echo                                       ÛÛ
-echo                                       ÛÛ
+::echo                                   ÛÛ      ÛÛ
+::echo                                    ÛÛ    ÛÛ
+::echo                                     ÛÛÛÛÛÛ 
+::echo                                       ÛÛ
+echo                                   oneOS Open
 echo.             
-echo                           	   Ypsilon
+::ho                           	   Ypsilon
 echo ________________________________________________________________________________
 echo Searching for boot.ini...
 if exist system\boot.ini (
@@ -65,7 +65,7 @@ call system\users\1.bat
 ping localhost -n 1 >NUL
 :startup
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -108,7 +108,7 @@ goto loadingbrooo
 :loadingbrooo
 if NOT exist system\users\1.bat goto create
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -132,7 +132,7 @@ echo ÛÛ
 call system\users\1.bat
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -156,17 +156,17 @@ echo ÛÛÛ
 ping localhost -n 1 >NUL
 if "%safemode%"=="1 " goto updatedlskip
 set xram=%random%
-echo Checking for updates....
-if exist system/update.bat (
-del /F /Q system\update.bat
-)
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://dl.litesec.co/updateoneos/update.bat', 'system\update.bat')" >NUL
-title OneOS: X Bootable by LiteSec LLC - Build %build%
-:updatedlskip
+::echo Checking for updates....
+::if exist system/update.bat (
+::del /F /Q system\update.bat
+::)
+:: just keeping this here if i decide to make an update service powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://dl.litesec.co/updateoneos/update.bat', 'system\update.bat')" >NUL
+::title oneOS: Open - Build %build%
+::updatedlskip
 
 
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -190,7 +190,7 @@ echo ÛÛÛÛ
 ping localhost -n 2 >NUL
 
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -213,7 +213,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -236,7 +236,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -259,7 +259,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 2 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -282,7 +282,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -305,7 +305,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -328,7 +328,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -351,7 +351,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -374,7 +374,7 @@ system\chgcolor %backcol%%linecol%
 echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
 ping localhost -n 1 >NUL
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -425,7 +425,7 @@ exit
 
 :finu
 cls
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 call :setcolour
 ::   ________________________________________________________________________________
 echo.
@@ -908,131 +908,7 @@ if "%checkactiv%"=="1037GB619CO2YG71QOR78RBW712IO87AN27FJJ74O9DK286NDCOLWO39GNE3
 set /p usagecount=<"%appdata%\LiteSec\oneosx.dll"
 call :setcolour
 ::   ______________________________________________________________________________
-echo.
-echo.      
-echo                                  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛ                         
-echo                                ÛÛÛÛÛ        ÛÛÛÛÛ                      
-echo                              ÛÛÛ               ÛÛÛ                     
-echo                             ÛÛÛ    ÛÛ      ÛÛ    ÛÛÛ                   
-echo                            ÛÛÛ      ÛÛÛ  ÛÛÛ      ÛÛÛ                  
-echo                           ÛÛÛ         ÛÛÛÛ         ÛÛÛ                  
-echo                           ÛÛÛ          ÛÛ          ÛÛÛ                  
-echo                           ÛÛÛ         ÛÛÛÛ         ÛÛÛ                  
-echo                            ÛÛÛ      ÛÛÛ  ÛÛÛ      ÛÛÛ                   
-echo                             ÛÛÛ    ÛÛ      ÛÛ    ÛÛÛ                   
-echo                              ÛÛÛÛ              ÛÛÛÛ                    
-echo                                ÛÛÛÛÛ        ÛÛÛÛÛ                      
-echo                                  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
-echo ________________________________________________________________________________
-echo.
-system\chgcolor %backcol%%linecol%
-echo To use full version of OneOS X, you should activate it. However, you can use
-echo the trial version to test OneOS X, and after expiracy you should activate.
-echo.
-echo [Enter product key]
-echo [Trial version ^(%usagecount% left^)] 
-for /f "delims=: tokens=1,2" %%A in ('system\batbox /m') do (
-set x=%%A
-set y=%%B
-)
 
-if %y%==21 (
-if %x% geq 0 if %x% leq 18 (
-goto activateoneos
-)
-)
-
-if %y%==22 (
-if %x% geq 0 if %x% leq 18 (
-if exist %appdata%\LiteSec\oneosx.dll (
-call :checkiftrialexpired
-)
-)
-)
-
-
-goto pkey
-
-:checkiftrialexpired
-set /p usagecount=<"%appdata%\LiteSec\oneosx.dll"
-if "%usagecount%"=="0" call :trialexpired
-set /a usagecount=%usagecount%-1
-echo ^%usagecount%> "%appdata%\LiteSec\oneosx.dll"
-set trial=1
-goto name
-
-:trialexpired
-echo Trial period has expired! To continue using OneOS, activate it.
-ping localhost -n 3 >nul
-goto pkey
-
-:activateoneos
-cls
-call :setcolour
-::   ______________________________________________________________________________
-echo.
-echo.
-echo                                  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛ                         
-echo                                ÛÛÛÛÛ        ÛÛÛÛÛ                      
-echo                              ÛÛÛ               ÛÛÛ                     
-echo                             ÛÛÛ    ÛÛ      ÛÛ    ÛÛÛ                   
-echo                            ÛÛÛ      ÛÛÛ  ÛÛÛ      ÛÛÛ                  
-echo                           ÛÛÛ         ÛÛÛÛ         ÛÛÛ                  
-echo                           ÛÛÛ          ÛÛ          ÛÛÛ                  
-echo                           ÛÛÛ         ÛÛÛÛ         ÛÛÛ                  
-echo                            ÛÛÛ      ÛÛÛ  ÛÛÛ      ÛÛÛ                   
-echo                             ÛÛÛ    ÛÛ      ÛÛ    ÛÛÛ                   
-echo                              ÛÛÛÛ              ÛÛÛÛ                    
-echo                                ÛÛÛÛÛ        ÛÛÛÛÛ                      
-echo                                  ÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
-echo ________________________________________________________________________________
-echo.
-system\chgcolor %backcol%%linecol%
-set /p oneosxprodukey=Enter your OneOS X product key: 
-if "%oneosxprodukey%"=="" goto activateoneos
-echo Activating, please wait...
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://node32.litesec.co/oneosxproductkeys.prk', 'system\ooxpk.prk')"
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://node32.litesec.co/usedkeys.prk', 'system\usedkeys.prk')"
-setlocal enableDelayedExpansion
-set chars=EMIYQDTUSHLVZJAGP-XKNFROBCW.
-for /L %%N in (10 1 28) do (
-for /F %%C in ("!chars:~%%N,1!") do (
-set "oneosxprodukey=!oneosxprodukey:%%C=_%%N!"
-)
-)
-setlocal disableDelayedExpansion
-for /f %%a in (system\ooxpk.prk) do (
-call :verifyusedkey
-if "%%a"=="%oneosxprodukey%" (
-echo 1037GB619CO2YG71QOR78RBW712IO87AN27FJJ74O9DK286NDCOLWO39GNE38GS93HHT810VJ284VJWI8T83UASIQPMFTEOZHW728GK919J28J2928TJE8218I3848W2928R8CN283928F28292848J1829FJ18737NSNFUQANNIQ91JNC> "%appdata%\LiteSec\sysfile32.dll"
-echo ^%oneosxprodukey% >> system\usedkeys.prk
-echo open ftp://username@server.addr:337 -passive=on> system\script.txt
-echo bin>> system\script.txt
-echo cd UploadHere>> system\script.txt
-echo rm usedkeys.prk>> system\script.txt
-echo put system\usedkeys.prk>> system\script.txt
-echo bye>> system\script.txt
-system\winscp.com -n /script=system\script.txt >nul
-echo Activated!
-ping localhost -n 3 >nul
-del system\ooxpk.prk /Q
-del system\usedkeys.prk /Q
-goto name
-)
-)
-echo Sorry, the product key is invalid.
-ping localhost -n 2 >nul
-del system\ooxpk.prk /Q
-goto pkey
-:verifyusedkey
-for /f %%b in (system\usedkeys.prk) do (
-if "%%b"=="%oneosxprodukey%" (
-echo Sorry, the key was already used.
-ping localhost -n 2 >nul
-goto pkey
-)
-)
-goto :eof
 :name
 cls
 call :setcolour
@@ -1110,8 +986,8 @@ echo               Û                  All programs                  Û
 echo               Û                                                Û
 echo               Û Command Prompt              Notepad            Û
 echo               Û Control Panel               WebBrowser         Û
-echo               Û OneCloud                    OneChat            Û
-echo               Û Apps                        OneMail            Û
+echo               Û NO SERVER                   NO SERVER          Û
+echo               Û Apps                        NO SERVER          Û
 echo               Û NEO                         Explorer           Û
 echo               Û Back...                     MediX              Û
 echo               Û                                                Û
@@ -2180,7 +2056,7 @@ if not exist system\cloud (
 mkdir system\cloud
 )
 powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://www.litesec.co/oneos/oneos/%ukey%.bat', 'system\cloud\%ukey%.bat')" >NUL
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 if "%errorlevel%"=="1" (
 system\chgcolor %backcol%c
 echo The specified user account does not exist.
@@ -2391,7 +2267,7 @@ echo get %ukey%.zip>> ..\..\script.txt
 echo bye>> ..\..\script.txt
 ..\..\winscp.com -n /script=..\..\script.txt
 del ..\..\script.txt
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 ..\..\7za e %ukey%.zip -y
 ..\..\chgcolor %backcol%3
 echo Opening your OneCloud Folder...
@@ -2697,7 +2573,7 @@ cls
 if not exist system\ncat.exe (
 echo Downloading server utils...
 powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://www.litesec.co/oneos/ncat.exe', 'system\ncat.exe')"
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 )
 call :setcolour
 for /f "delims=" %%a in ('time /t') do @set time=%%a
@@ -2923,7 +2799,7 @@ echo For example, hello.app.bat would be "hello".
 echo.
 set /p launch="App name: "
 call system\apps\%launch%.app.bat
-title OneOS: X Bootable by LiteSec LLC - Build %build%
+title oneOS: Open - Build %build%
 echo Welcome back!
 ping localhost -n 2 >NUL
 goto apps_ok
