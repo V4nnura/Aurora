@@ -12,7 +12,7 @@ set oneosrootfol=%cd%
 set uptime=%time%
 echo set safemode=^0> system\safemode.bat
 set debug=0
-set build=10
+set build=1070
 for /f %%a in (system\settings.conf) do set %%a
 if NOT exist system\downloaded1.info (
 goto make_hasinter2
@@ -23,13 +23,13 @@ goto make_hasinter3
 :bios
 cls
 ::   ________________________________________________________________________________
-::echo                                   ÛÛ      ÛÛ
-::echo                                    ÛÛ    ÛÛ
-::echo                                     ÛÛÛÛÛÛ 
-::echo                                       ÛÛ
+echo                                   ÛÛÛÛÛÛÛÛÛÛ
+echo                                    ÛÛ    ÛÛ
 echo                                   oneOS Open
+echo                                    ÛÛ    ÛÛ
+echo                                   ÛÛÛÛÛÛÛÛÛÛ
 echo.             
-::ho                           	   Ypsilon
+echo                           	   Gemini Boot Loader
 echo ________________________________________________________________________________
 echo Searching for boot.ini...
 if exist system\boot.ini (
